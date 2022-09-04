@@ -253,7 +253,7 @@ wstring CHidemaruExeExport::GetLineText(int lineno) {
 	HGLOBAL hGlobal = CHidemaruExeExport::Hidemaru_GetLineTextUnicode(lineno);
 	if (hGlobal) {
 		wchar_t* pwsz = (wchar_t*)GlobalLock(hGlobal);
-		if (pswz) {
+		if (pwsz) {
 			wstring text(pwsz); // ÉRÉsÅ[
 			GlobalUnlock(hGlobal);
 			GlobalFree(hGlobal); // å≥ÇÃÇÕâï˙
